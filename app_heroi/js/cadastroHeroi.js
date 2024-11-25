@@ -6,6 +6,7 @@ function cadastrarHeroi() {
     var fraqueza = $("#fraqueza").val();
     var historiaOrigem = $("#historiaOrigem").val();
     var primeiraAparicao = $("#primeiraAparicao").val();
+    var imagem = $("#imagem").val();
 
     axios.post("http://localhost:8080/superHeroi", {
         "nome": nome,
@@ -14,6 +15,8 @@ function cadastrarHeroi() {
         "fraqueza": fraqueza,
         "historiaOrigem": historiaOrigem,
         "primeiraAparicao": primeiraAparicao,
+        "imagem": imagem
+
     })
     .then(function (response) {
         console.log(response);
